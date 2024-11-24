@@ -1,0 +1,95 @@
+input[type="date"] {
+    cursor: pointer;
+}
+
+.centered {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    text-align: center;      /* Optional: Center text */
+}
+
+
+
+/* Custom Navbar Font Color */
+.navbar-custom .navbar-nav .nav-link {
+    color: white; /* Set font color to white */
+}
+
+/* Modernize the appearance of the date input */
+input.modern-date-picker {
+    border: 1px solid #0d6efd; /* Bootstrap primary color */
+    border-radius: 5px;
+    /* padding: 10px; */
+    font-size: 16px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+input.modern-date-picker:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+/* Focus effect */
+input.modern-date-picker:focus {
+    outline: none;
+    box-shadow: 0 0 8px #0d6efd; /* Highlight color */
+    border-color: #0d6efd;
+}
+
+#searchResults div {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#searchMessage {
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-sm {
+    height: 34px; /* Adjust this to your desired button height */
+    min-width: 100px; /* Set a minimum width for all buttons */
+    width: 100%; /* Ensures the buttons take full width within their container */
+    display: inline-flex;
+    align-items: center; /* Ensures the content is centered vertically */
+    justify-content: center; /* Ensures the content is centered horizontally */
+}
+
+/* Ensure pagination is horizontally scrollable only on small screens */
+@media (max-width: 768px) {
+    .details-container {
+        margin: 20px auto;
+        max-width: 600px;
+    }
+    .pagination-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+
+    .pagination-wrapper .pagination {
+        display: inline-block;
+    }
+
+    .pagination-wrapper .page-item {
+        display: inline-block;
+    }
+}
+
+
+/* Remove unwanted search input icons/clear buttons */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type="search"]::-webkit-outer-spin-button,
+input[type="search"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
