@@ -68,7 +68,7 @@
         <div class="d-flex mt-2 mt-md-0 ms-md-3 mb-3 mb-md-0">
             <select name="sortBy" class="form-control form-control-md" onchange="this.form.submit()">
                 <option value="" disabled selected>-- Sort Tasks By --</option>
-                {{-- <option value="random" {{ request('sortBy') == 'random' ? 'selected' : '' }}>Sort Randomly</option> --}}
+                <option value="random" {{ request('sortBy') == 'random' ? 'selected' : '' }}>Sort Randomly</option>
                 <option value="title" {{ request('sortBy') == 'title' ? 'selected' : '' }}>Sort by Title</option>
                 <option value="priority" {{ request('sortBy') == 'priority' ? 'selected' : '' }}>Sort by Priority</option>
                 <option value="due_date" {{ request('sortBy') == 'due_date' ? 'selected' : '' }}>Sort by Due Date</option>

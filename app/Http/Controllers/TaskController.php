@@ -72,7 +72,7 @@ class TaskController extends Controller
             return view('tasks.detail', compact('task'));
         }
 
-    public function index(Request $request)
+        public function index(Request $request)
         {
             $search = $request->input('search');
             $sortBy = $request->input('sortBy', 'random'); // Default sorting by random if not specified
@@ -91,6 +91,9 @@ class TaskController extends Controller
                             })
                             ->when($sortBy == 'title', function ($query) {
                                 return $query->orderBy('title', 'asc'); // Sort by title
+                            })
+                            ->when($sortBy == 'due_date', function ($query) {
+                                return $query->orderBy('due_date', 'asc'); // Sort by due date (nearest first)
                             })
                             ->when($sortBy == 'random', function ($query) {
                                 return $query->inRandomOrder(); // Default random order
@@ -112,6 +115,7 @@ class TaskController extends Controller
         
             return view('tasks.index', compact('tasks', 'search', 'sortBy'));
         }
+        
                               
 
     public function destroy(Request $request, $id)
